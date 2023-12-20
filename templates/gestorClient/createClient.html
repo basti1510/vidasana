@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{titulo_menu}}</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin-2.min.css'%}" rel="stylesheet">
+    <style>
+        #back {
+            color:white;
+
+          }   
+    </style>
+</head>
+
+<body class="bg-gradient-info">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">                   
+                    <div class="text-center">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">{{titulo_menu}}</h1>
+                            </div>
+                            <form method="post">
+
+                                <!--CSRF_TOKEN-->
+                                {% csrf_token %}
+                                
+                                
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_nombre" name="nombre"
+                                        placeholder="Nombre">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_rut" name="rut"
+                                        placeholder="RUT">
+                                </div>        
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_nacimiento" name="nacimiento"
+                                        placeholder="Nacimiento">
+                                </div>
+                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_edad" name="edad"
+                                        placeholder="Edad">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_telefono" name="telefono"
+                                        placeholder="Telefono">
+                                </div>
+                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_estatura" name="estatura"
+                                        placeholder="Estatura">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_peso" name="peso"
+                                        placeholder="Peso">
+                                </div>
+                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_imc" name="imc"
+                                        placeholder="IMC">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_talla" name="talla"
+                                        placeholder="Talla">
+                                </div>
+                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_cintura" name="cintura"
+                                        placeholder="Cintura">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_presion" name="presion"
+                                        placeholder="Presion">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_f_cardiaca" name="f_cardiaca"
+                                        placeholder="Frecuencia Cardiaca">
+                                </div>
+                                        
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="id_p_grasa" name="p_grasa"
+                                        placeholder="Porcentaje de Grasa">
+                                </div>
+                                
+                                
+                                <button class="btn btn-info btn-user btn-block" type="submit">
+                                    {{boton}}
+                                </button>
+                                <hr>                                
+                            </form>
+                            <a id="back" href="{% url 'dashboard' %}">
+                                <button class="btn btn-secondary btn-user btn-block" type="submit">
+                                    Volver al Dashboard 
+                                </button>
+                            </a>
+                            <hr>                                                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'js/sb-admin-2.min.js'%}"></script>
+
+</body>
+
+</html>
